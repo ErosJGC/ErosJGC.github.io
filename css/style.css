@@ -23,15 +23,9 @@
 
 /* MyClass */
 .myclass {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #f5f6f7;
     min-height: 450px;
     text-align: center;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    color: inherit;
 }
 
 .myclass-main {
@@ -54,13 +48,6 @@
 .about-me {
     height: 500px;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    color: white;
 }
 
 .section-oscura {
@@ -84,13 +71,6 @@
 
 .experiencia {
     padding: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    color: var(--color_2);
 }
 
 .experiencia-columna:hover {
@@ -135,13 +115,6 @@
 
 .proyectos {
     padding: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    color: var(--color_2);
 }
 
 .proyectos img {
@@ -228,13 +201,6 @@ h1 {
     width: 80%;
     max-width: 600px;
     margin: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    color: var(--color_2);
 }
 
 .tips .card-header {
@@ -243,13 +209,6 @@ h1 {
 
 .recomendaciones {
     padding: 40px 40px 80px 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    color: var(--color_2);
 }
 
 .recomendaciones .carousel {
@@ -310,13 +269,9 @@ h1 {
 
 .contact .rectangulo {
     margin-top: -5rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    color: var(--color_3);
+    background-color: var(--color_1);
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px 1px var(--color_3);
 }
 
 .contact .row {
@@ -356,13 +311,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    color: var(--color_0);
 }
 
 .footer-icon {
@@ -409,6 +357,7 @@ footer {
     color: var(--color_4);
     padding: 20px;
 }
+
 
 /* Responsive */
 
