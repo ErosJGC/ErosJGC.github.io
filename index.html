@@ -1,361 +1,290 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Metadatos -->
     <meta charset="UTF-8">
-    <meta name="author" content="solrac">
-    <meta name="description" content="My Projects TW 2">
-    <meta name="keywords" content="HTML, CSS, JS, Bootstrap">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title -->
-    <title>My Profile</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./images/yoElegante.jpg">
-    <!-- Bootstrap CSS offline -->
+    <title>My Profile - Glass</title>
+
+    <!-- Bootstrap -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons offline -->
     <link href="./icons/bootstrap-icons.css" rel="stylesheet">
-    <!-- Bootstrap CSS online -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
-    <!-- Bootstrap Icons online -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> -->
-    <!-- My CSS -->
-    <link href="./css/style.css" rel="stylesheet">
+
+    <style>
+        
+        body {
+            background: linear-gradient(135deg, #8ec5fc, #e0c3fc);
+            background-attachment: fixed;
+            font-family: "Poppins", sans-serif;
+        }
+
+
+        .glass {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+            padding: 20px;
+        }
+
+        
+        nav.navbar {
+            margin: 10px;
+            border-radius: 20px;
+        }
+        nav.navbar .navbar-brand img {
+            border-radius: 50%;
+        }
+        nav.navbar {
+            background: rgba(255,255,255,0.25) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        
+        .myclass {
+            margin: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .myclass-main {
+            text-align: center;
+            color: #fff;
+        }
+        .myclass-pic {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.5);
+        }
+        .myclass-label img {
+            max-width: 300px;
+        }
+
+        
+        section {
+            margin: 40px 20px;
+        }
+
+        .section-oscura, .section-clara {
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .section-oscura {
+            background: rgba(0,0,0,0.35);
+            color: #fff;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-clara {
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(10px);
+        }
+
+
+        .experiencia-columna {
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255,255,255,0.2);
+            margin-bottom: 20px;
+            backdrop-filter: blur(12px);
+        }
+
+
+        .proyecto {
+            overflow: hidden;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .proyecto img {
+            width: 100%;
+            height: auto;
+        }
+        .proyecto .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(6px);
+            opacity: 0;
+            transition: 0.3s;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .proyecto:hover .overlay {
+            opacity: 1;
+        }
+
+     
+        .tips .card {
+            background: rgba(255,255,255,0.25);
+            border-radius: 20px;
+            border: none;
+            backdrop-filter: blur(12px);
+        }
+        .tips .list-group-item {
+            background: transparent;
+            color: #000;
+        }
+
+    
+        .rectangulo {
+            background: rgba(255,255,255,0.25);
+            border-radius: 20px;
+            padding: 20px;
+            backdrop-filter: blur(12px);
+        }
+        #contactme button {
+            background: rgba(255,255,255,0.3);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+        }
+
+      
+        footer {
+            background: rgba(0, 0, 0, 0.4);
+            color: white;
+            backdrop-filter: blur(12px);
+            padding: 40px 10px;
+        }
+    </style>
 </head>
 <body>
-    <!-- NavBar -->
-    <nav class="navbar navbar-expand-md navbar-light">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-light glass">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbar-toggler"
-                aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbar-toggler">
                 <a class="navbar-brand" href="#">
-                    <img src="./images/yoTraje.jpg" width="50" alt="My logo">
+                    <img src="./images/yoTraje.jpg" width="50" alt="logo">
                 </a>
-                <ul class="navbar-nav d-flex justify-content-center aling-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#aboutme" aria-current="page">Sobre mí <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#references">Referencias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contactme">Contacto</a>
-                    </li>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#aboutme">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#references">Referencias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contactme">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
-    <!-- Me -->
-    <section class="myclass aling-items-stretch">
-        <div class="myclass-main d-flex flex-column justify-content-center aling-items-center">
-            <img class="myclass-pic rounded-circle" src="./images/yoElegante.jpg" alt="My selfie">
+
+    <!-- HERO -->
+    <section class="myclass">
+        <div class="myclass-main glass">
+            <img class="myclass-pic rounded-circle" src="./images/yoElegante.jpg">
             <h1>Hola, soy Eros</h1>
             <h2>El C papu programador :v</h2>
         </div>
-        <div class="myclass-label">            
-            <img class="myclass-imagen img-fluid" src="./images/arthurDiseñador.png" alt="think twice code once">
+        <div class="myclass-label glass">
+            <img src="./images/arthurDiseñador.png" class="img-fluid">
         </div>
     </section>
 
-    <!-- About me -->
-    <section id="aboutme" class="about-me section-oscura">
-        <div class="contenedor">
-            <h2 class="seccion-titulo">Sobre mi</h2>
-            <p class="seccion-texto">
-                Soy Eros, desarrollador web "En desarrollo", me gusta programar, jugar videojuegos y hacer musica.
-            </p>
-        </div>
+    <!-- SOBRE MÍ -->
+    <section id="aboutme" class="section-oscura glass">
+        <h2>Sobre mí</h2>
+        <p>Soy Eros, desarrollador web "En desarrollo", me gusta programar, jugar videojuegos y hacer música.</p>
     </section>
 
-    <!-- Experience -->
-    <section class="experiencia section-clara">
+    <!-- EXPERIENCIA -->
+    <section class="section-clara glass">
         <div class="container text-center">
             <div class="row">
-                <!-- Programming -->
-                <div class="experiencia-columna col-12 col-md-4">                    
-                    <p class="columna experiencia-title">Programación</p>                    
+                <div class="col-md-4 experiencia-columna">
+                    <h4>Programación</h4>
                     <i class="bi-braces"></i>
-                    <p>
-                        experiencia en programacion con varios lenguajes como, C y Java.
-                    </p>
-                    <div class="badge-contenedor">                        
-                        <span class="badge bg-primary">C</span>
-                        <span class="badge bg-primary">Java</span>                        
-                    </div>
+                    <p>Experiencia en C y Java.</p>
                 </div>
-                <!-- Design -->
-                <div class="experiencia-columna col-12 col-md-4">                    
-                    <p class="columna experiencia-title">desarrollo</p>
+                <div class="col-md-4 experiencia-columna">
+                    <h4>Desarrollo</h4>
                     <i class="bi-window-desktop"></i>
-                    <p>
-                        Poca experiencia en desarrollo web, tomando mi primer curso.
-                    </p>
-                    <div class="badge-contenedor">                        
-                        <span class="badge bg-primary">HTML</span>                        
-                        <span class="badge bg-primary">JavaScript</span>                     
-                    </div>
+                    <p>Tomando mi primer curso de desarrollo web.</p>
                 </div>
-                <!-- Management -->
-                <div class="experiencia-columna col-12 col-md-4">
-                    <p class="columna experiencia-title">Management</p>
+                <div class="col-md-4 experiencia-columna">
+                    <h4>Management</h4>
                     <i class="bi-person-gear"></i>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque enim maiores deserunt aliquam facere. 
-                    </p>
-                    <div class="badge-contenedor">                        
-                        <span class="badge bg-primary">Scrum</span>                        
-                        <span class="badge bg-primary">Trello</span>
-                        <span class="badge bg-primary">MVC</span>                        
-                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="proyectos section-clara d-flex flex-column">
-        <h2 class="seccion-titulo">Mis Proyectos</h2>
-        <h3 class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h3>
-        <!-- gallery -->
-        <div class="container text-center proyectos-contenedor">
+    <!-- PROYECTOS -->
+    <section id="projects" class="section-clara glass">
+        <h2 class="text-center">Mis Proyectos</h2>
+        <div class="container proyectos-contenedor">
             <div class="row">
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-md-4">
                     <div class="proyecto">
-                        <img src="./images/pro1.jpg" alt="Project 1">
-                        <div class="overlay">
-                            <p>Mi primera chamba</p>
-                            <div class="icons-project">
-                                <a href="" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi-github"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <img src="./images/pro1.jpg">
+                        <div class="overlay"><p>Mi primera chamba</p></div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-md-4">
                     <div class="proyecto">
-                        <img src="./images/pro2.png" alt="Project 1">
-                        <div class="overlay">
-                            <p>Mi primera chamba</p>
-                            <div class="icons-project">
-                                <a href="" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi-github"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <img src="./images/pro2.png">
+                        <div class="overlay"><p>Mi primera chamba</p></div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-md-4">
                     <div class="proyecto">
-                        <img src="./images/pro3.jpeg" alt="Project 1">
-                        <div class="overlay">
-                            <p>Mi primera chamba</p>
-                            <div class="icons-project">
-                                <a href="" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="proyecto">
-                        <img src="./images/pro4.png" alt="Project 1">
-                        <div class="overlay">
-                            <p>Mi primera chamba</p>
-                            <div class="icons-project">
-                                <a href="" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="proyecto">
-                        <img src="./images/pro5.jpg" alt="Project 1">
-                        <div class="overlay">
-                            <p>Mi primera chamba</p>
-                            <div class="icons-project">
-                                <a href="" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="proyecto">
-                        <img src="./images/pro6.jpg" alt="Project 1">
-                        <div class="overlay">
-                            <p>Mi primera chamba</p>
-                            <div class="icons-project">
-                                <a href="" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi-github"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <img src="./images/pro3.jpeg">
+                        <div class="overlay"><p>Mi primera chamba</p></div>
                     </div>
                 </div>
             </div>
         </div>
-        <a href="" target="_blank" rel="noopener noreferrer"></a>
-            <button type="button" class="btn btn-info">Más chambas
-                <i class="bi-arrow-right-circle"></i>
-            </button>
-        </a>
     </section>
 
-    <!-- Tips -->
-    <section class="tips justify-content-start">
-        <h2 class="seccion-titulo">Tips</h2>
+    <!-- TIPS -->
+    <section class="tips glass">
+        <h2>Tips</h2>
         <div class="card">
-            <div class="card-header">
-                Sobre Programación
-            </div>
+            <div class="card-header">Sobre Programación</div>
             <ul class="list-group list-group-flush">
-                <a href="" target="_blank" rel="noopener noreferrer">
-                    <li class="list-group-item">La doble compilación</li>
-                </a>
-                <a href="" target="_blank" rel="noopener noreferrer">
-                    <li class="list-group-item">Cómo pasar programación sin programar</li>
-                </a>
-                <a href="https://www.youtube.com/watch?v=i_cVJgIz_Cs" target="_blank" rel="noopener noreferrer">
-                    <li class="list-group-item">No te olvides de poner el Where en el Delete From</li>
-                </a>
-                <a href="https://www.elladodelmal.com/2013/08/como-ser-hacker-o-como-aprender-hacking.html" target="_blank" rel="noopener noreferrer">
-                    <li class="list-group-item">Cómo ser hacker o Cómo aprender hacking</li>
-                </a>
-                <a href="https://www.tiktok.com/@racxogaming/video/7301543601022995718?q=jasware%20mec%C3%A1nico&t=1700262855116" target="_blank" rel="noopener noreferrer">
-                    <li class="list-group-item">El jaswer con descripción gráfica</li>
-                </a>
+                <li class="list-group-item">La doble compilación</li>
+                <li class="list-group-item">Cómo pasar programación sin programar</li>
+                <li class="list-group-item">No olvides el WHERE en DELETE FROM</li>
             </ul>
         </div>
-        <a href="" target="_blank" rel="noopener noreferrer">
-            <button type="button" class="btn btn-info">Más tips
-                <i class="bi-arrow-right-circle"></i>
-            </button>
-        </a>
     </section>
 
-    <!-- References -->
-    <section id="references" class="recomendaciones section-clara">
-        <h2 class="seccion-titulo">Recomendaciones</h2>
-        <h3 class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-        <div id="recomendaciones" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#recomendaciones" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#recomendaciones" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#recomendaciones" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container">
-                    <img src="./images/squirrel.png" class="recomendacion-imagen rounded-circle" alt="...">
-                    <p class="recomendacion-texto"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati harum itaque sunt. Voluptas, nobis! Inventore fugit eos corrupti odit eius dolorem.</p>
-                    <div class="recomendacion-info">
-                        <p class="amigo">Gasparin</p>
-                        <p class="cargo">Fantasma amigable</p>
-                    </div>                    
-                </div>
-            </div> 
-            <div class="carousel-item">
-                <div class="container">
-                    <img src="./images/squirrel.png" class="recomendacion-imagen rounded-circle" alt="...">
-                    <p class="recomendacion-texto"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati harum itaque sunt. Voluptas, nobis! Inventore fugit eos corrupti odit eius dolorem.</p>
-                    <div class="recomendacion-info">
-                        <p class="amigo">Woody</p>
-                        <p class="cargo">Amigo fiel</p>
-                    </div>                    
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <img src="./images/squirrel.png" class="recomendacion-imagen rounded-circle" alt="...">
-                    <p class="recomendacion-texto"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati harum itaque sunt. Voluptas, nobis! Inventore fugit eos corrupti odit eius dolorem.</p>
-                    <div class="recomendacion-info">
-                        <p class="amigo">Rexona</p>
-                        <p class="cargo">Nunca te abandona</p>
-                    </div>                    
-                </div>
-            </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#recomendaciones"  data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#recomendaciones"  data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    <!-- CONTACTO -->
+    <section id="contactme" class="section-oscura glass">
+        <div class="container rectangulo text-center">
+            <h3>Talk to me</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <a href="mailto:"><button>Contacto <i class="bi-envelope-check"></i></button></a>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contactme" class="contact section-oscura">
-        <div class="container">
-            <div class="container text-center rectangulo d-flex justify-content-evenly">
-                <div class="row">
-                    <div class="col-12 col-md-4 seccion-titulo">
-                        Talk to me
-                    </div>
-                    <div class="col-12 col-md-4 description">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <a href="mailto:">
-                            <button type="button">
-                                Contacto
-                                <i class="bi-envelope-check"></i>
-                            </button>
-                        </a>                        
-                    </div>                    
-                </div>
-            </div>
+    <!-- FOOTER -->
+    <footer class="glass text-center">
+        <img src="./images/favicon.png" width="60">
+        <p>Rem numquam minima sit consequatur fugit.</p>
+        <div>
+            <i class="bi-github mx-2"></i>
+            <i class="bi-instagram mx-2"></i>
+            <i class="bi-linkedin mx-2"></i>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="section-oscura d-flex flex-column aling-items-center justify-content-center">
-        <img class="footer-icon" src="./images/favicon.png" alt="Logo profile">
-        <p class="footer-text text-center">
-            Rem numquam minima sit consequatur  <br> fugit aliquid alias ratione adipisci.
-        </p>
-        <div class="icons-sn d-flex flex-wrap aling-items-center justify-content-center">
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="bi-twitter"></i>
-            </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="bi-facebook"></i>
-            </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="bi-github"></i>
-            </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="bi-linkedin"></i>
-            </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="bi-instagram"></i>
-            </a>
-            <a href="mailto:" target="_blank" rel="noopener noreferrer">
-                <i class="bi-envelope"></i>
-            </a>
-        </div>
-        <div class="author"> Name (2024) &#169; </div>
+        <small>Name (2024) ©</small>
     </footer>
 
-    <!-- Bootstrap JS offline -->
-    <script src="./js/bootstrap.min.js"></script>    
-    <!-- Bootstrap JS online -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script> -->
-    <!-- My JS -->
-    <script src="./js/main.js"></script>    
+    <script src="./js/bootstrap.min.js"></script>
 </body>
 </html>
